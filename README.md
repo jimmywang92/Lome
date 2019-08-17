@@ -3,7 +3,7 @@
 this is the matching app between people and event,
 we want to make people able to meet anywhere, anytime 
 
-
+![A test image](assets/images/cover.png)
 
 -   [Instagram](https://www.instagram.com/lome.tokyo/?hl=zh-tw)
 -   [Meetup Page](http://meetu.ps/c/4rHb9/DYczY/d)
