@@ -1,11 +1,11 @@
 ## Lome v1.1.0
 
-Thanks for purchasing the React Native Fiber Firebase.
+this is the matching app between people and event,
+we want to make people able to meet anywhere, anytime 
 
-Follow the documentation to install and get started with the development:
 
--   [Documentation](https://wcandillon.github.io/react-native-fiber/Firebase.html)
--   [Product Page](https://market.nativebase.io/view/react-native-fiber-firebase)
--	[License Page](https://market.nativebase.io/licenses)
 
-Happy coding!
+-   [Instagram](https://www.instagram.com/lome.tokyo/?hl=zh-tw)
+-   [Meetup Page](http://meetu.ps/c/4rHb9/DYczY/d)
+
+
