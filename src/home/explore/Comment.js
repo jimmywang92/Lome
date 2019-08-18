@@ -8,6 +8,7 @@ import type {Comment, Profile} from "../../components/Model";
 type CommentProps = {
     comment: Comment,
     profile: Profile
+    
 };
 
 export default class CommentComp extends React.PureComponent<CommentProps> {
@@ -21,6 +22,7 @@ export default class CommentComp extends React.PureComponent<CommentProps> {
                 <View style={styles.comment}>
                     <Text style={styles.author}>{name}</Text>
                     <Text>{text}</Text>
+                    
                 </View>
             </View>
         );
