@@ -5,7 +5,7 @@ import { Feather as Icon } from "@expo/vector-icons";
 
 import {Theme} from "../components";
 
-import type {NavigationProps} from "../components/Types";
+import type{NavigationProps} from "../components/Types";
 
 type Tab = { label: string, icon: string };
 
@@ -14,7 +14,8 @@ export class HomeTab extends React.Component<NavigationProps<*>> {
     static tabs: Tab[] = [
         { label: "Explore", icon: "home" },
         { label: "Share", icon: "camera" },
-        { label: "Profile", icon: "user" }
+        { label: "Profile", icon: "user" },
+        { label: "Upload", icon: "plus-circle" }
     ];
 
     render(): React.Node {
@@ -31,11 +32,13 @@ export class HomeTab extends React.Component<NavigationProps<*>> {
                                 <TouchableWithoutFeedback
                                     key={info.label}
                                     onPress={() => (i !== cIdx ? this.props.navigation.navigate(info.label) : null)}
+                                    // onPress={() => console.log(info.label)}
                                 >
                                     <View style={styles.tab}>
                                         <Icon name={info.icon} size={25} {...{ color }} />
                                     </View>
                                 </TouchableWithoutFeedback>
+                                
                             );
                         })
                     }

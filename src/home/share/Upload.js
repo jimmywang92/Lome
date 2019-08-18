@@ -21,7 +21,7 @@ type ShareState = {
     ratio: string | void
 };
 
-export default class Share extends React.Component<ScreenProps<>, ShareState> {
+export default class Upload extends React.Component<ScreenProps<>, ShareState> {
     
     // $FlowFixMe
     camera = React.createRef();
