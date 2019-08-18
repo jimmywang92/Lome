@@ -23,7 +23,7 @@ export default class Welcome extends React.Component<ScreenProps<>> {
             <Container gutter={2} style={styles.root}>
                 <Logo />
                 <AnimatedView style={styles.container}>
-                    <Text type="header1" style={styles.header}>Fiber</Text>
+                    <Text type="header1" style={styles.header}>Lome</Text>
                 </AnimatedView>
                 <AnimatedView style={styles.container} delay={600} duration={300}>
                     <Button label="Login" onPress={this.login} full primary />
