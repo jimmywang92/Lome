@@ -78,13 +78,13 @@ export default class PostComp extends React.Component<PostProps, PostState> {
                     )
                 }
                 <View style={contentStyle}>
-                    <View style={styles.header}>
+                    {/* <View style={styles.header}>
                         <Avatar {...profile.picture} />
                         <View style={styles.metadata}>
                             <Text style={nameStyle}>{profile.name}</Text>
                             <Text style={dateStyle}>{moment(post.timestamp, "X").fromNow()}</Text>
                         </View>
-                    </View>
+                    </View> */}
                     <View>
                         <Text style={textStyle} gutterBottom>{post.text}</Text>
                     </View>

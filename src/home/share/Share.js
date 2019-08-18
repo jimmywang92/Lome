@@ -5,6 +5,7 @@ import {StyleSheet, View, Dimensions, TouchableWithoutFeedback, TouchableOpacity
 import { Camera } from "expo-camera";
 import * as Permissions from "expo-permissions";
 import { Feather as Icon } from "@expo/vector-icons";
+import {ImagePicker} from "expo";
 
 import EnableCameraPermission from "./EnableCameraPermission";
 import FlashIcon from "./FlashIcon";
@@ -83,6 +84,28 @@ export default class Share extends React.Component<ScreenProps<>, ShareState> {
         }
     }
 
+    
+    @autobind
+    async snap_2(): Promise<void> {
+        const {navigation} = this.props;
+        try {
+            this.setState({ loading: true });
+            const picture = await ImagePicker.launchImageLibraryAsync({
+                allowsEditing: true,
+                aspect: [4, 3]
+            });
+            this.setState({ loading: false });
+            navigation.navigate("SharePicture", picture);
+        } catch (e) {
+            this.setState({ loading: false });
+            // eslint-disable-next-line no-alert
+            alert(serializeException(e));
+        }
+    }
+
+
+
+
     render(): React.Node {
         const {onCameraReady} = this;
         const {navigation} = this.props;
@@ -126,7 +149,9 @@ export default class Share extends React.Component<ScreenProps<>, ShareState> {
                 <View style={styles.footer}>
                     <TouchableOpacity onPress={this.snap}>
                         <View style={styles.btn} />
-                        <View style={styles.btn} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={this.snap_2}>
+                        <Icon name="plus-circle" color={Theme.palette.primary} size={25} />
                     </TouchableOpacity>
                     
                 </View>
@@ -164,13 +189,9 @@ const styles = StyleSheet.create({
         color: "white"
     },
     footer: {
-        // flexGrow: 1,
-        // justifyContent: "center",
-        // alignItems: "center",
         flexGrow: 1,
-        flexDirection: 'row',
-        position: 'relative',
-        justifyContent: 'space-between'
+        justifyContent: "center",
+        alignItems: "center",
     },
     btn: {
         height: ratio < 0.75 ? 100 : 60,

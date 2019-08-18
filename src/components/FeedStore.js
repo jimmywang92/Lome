@@ -107,6 +107,7 @@ export default class FeedStore {
     addToFeed(entries: FeedEntry[]) {
         const feed = _.uniqBy([...this.feed.slice(), ...entries], entry => entry.post.id);
         this.feed = _.orderBy(feed, entry => entry.post.timestamp, ["desc"]);
+        
     }
 
     subscribeToPost(id: string, callback: Post => void): Subscription {

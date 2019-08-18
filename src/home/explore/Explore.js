@@ -85,7 +85,7 @@ export default class Explore extends React.Component<ScreenProps<> & InjectedPro
                                 type="large"
                                 style={[styles.newPosts, { opacity, transform: [{ translateY }] }]}
                             >
-                            New posts
+                            New events
                             </AnimatedText>
                             <AnimatedText
                                 type="header2"
