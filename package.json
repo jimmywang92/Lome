@@ -39,7 +39,7 @@
         "@expo/vector-icons": "10.0.1",
         "autobind-decorator": "^1.4.0",
         "crypto-js": "^3.1.9-1",
-        "expo": "^33.0.0",
+        "expo": "^46.0.16",
         "expo-asset": "^5.0.1",
         "expo-blur": "~5.0.1",
         "expo-camera": "~5.0.1",
